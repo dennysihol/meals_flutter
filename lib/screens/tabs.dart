@@ -3,6 +3,7 @@ import 'package:meals/models/meal.dart';
 import 'package:meals/screens/categories.dart';
 import 'package:meals/screens/meals.dart';
 import 'package:meals/widgets/main_drawer.dart';
+import 'package:meals/screens/filters.dart';
 
 class TabsScreen extends StatefulWidget {
   const TabsScreen({super.key});
@@ -21,6 +22,15 @@ class _TabsScreenState extends State<TabsScreen> {
     setState(() {
       _selectedPageIndex = index;
     });
+  }
+
+  void _setScreen(String identifier) {
+    if (identifier == 'filters') {
+      Navigator.of(context).push(MaterialPageRoute(builder: (context) => const FilterScreen()));
+    } else {
+      Navigator.of(context).pop();
+    }
+    
   }
 
   void _showInfoMessage(message) {
@@ -68,7 +78,9 @@ class _TabsScreenState extends State<TabsScreen> {
         appBar: AppBar(
           title: Text(activePageTitle),
         ),
-        drawer: const MainDrawer(),
+        drawer: MainDrawer(
+          onSelectScreen: _setScreen,
+        ),
         body: activePage,
         bottomNavigationBar: BottomNavigationBar(
           onTap: _selectPage,
