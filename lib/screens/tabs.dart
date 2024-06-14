@@ -25,12 +25,14 @@ class _TabsScreenState extends State<TabsScreen> {
   }
 
   void _setScreen(String identifier) {
+    Navigator.of(context).pop();
     if (identifier == 'filters') {
-      Navigator.of(context).push(MaterialPageRoute(builder: (context) => const FilterScreen()));
-    } else {
-      Navigator.of(context).pop();
-    }
-    
+      Navigator.of(context).push(
+        MaterialPageRoute(
+          builder: (context) => const FilterScreen(),
+        ),
+      );
+    } 
   }
 
   void _showInfoMessage(message) {
