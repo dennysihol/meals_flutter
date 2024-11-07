@@ -29,7 +29,7 @@ class MealDetailsScreen extends ConsumerWidget {
                   ),
                 );
               },
-              icon: Icon(Icons.star),
+              icon: const Icon(Icons.star),
             )
           ],
         ),
@@ -59,7 +59,7 @@ class MealDetailsScreen extends ConsumerWidget {
                 Text(
                   ingredient,
                   style: Theme.of(context).textTheme.titleLarge!.copyWith(
-                      color: Theme.of(context).colorScheme.onBackground),
+                      color: Theme.of(context).colorScheme.onSurface),
                 ),
               const SizedBox(
                 height: 14,
@@ -82,7 +82,7 @@ class MealDetailsScreen extends ConsumerWidget {
                     step,
                     textAlign: TextAlign.center,
                     style: Theme.of(context).textTheme.titleLarge!.copyWith(
-                        color: Theme.of(context).colorScheme.onBackground),
+                        color: Theme.of(context).colorScheme.onSurface),
                   ),
                 )
             ],

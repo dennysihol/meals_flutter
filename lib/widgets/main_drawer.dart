@@ -11,7 +11,7 @@ class MainDrawer extends StatelessWidget {
       child: Column(
         children: [
           DrawerHeader(
-            padding: EdgeInsets.all(18),
+            padding: const EdgeInsets.all(18),
             decoration: BoxDecoration(
                 gradient: LinearGradient(
               colors: [
@@ -41,11 +41,11 @@ class MainDrawer extends StatelessWidget {
             ),
           ),
           ListTile(
-            leading: Icon(Icons.restaurant, size: 26, color: Theme.of(context).colorScheme.onBackground,),
+            leading: Icon(Icons.restaurant, size: 26, color: Theme.of(context).colorScheme.onSurface,),
             title: Text(
               'Meals',
               style: Theme.of(context).textTheme.titleSmall!.copyWith(
-                    color: Theme.of(context).colorScheme.onBackground,
+                    color: Theme.of(context).colorScheme.onSurface,
                     fontSize: 24,
                   ),
             ),
@@ -54,11 +54,11 @@ class MainDrawer extends StatelessWidget {
             },
           ),
           ListTile(
-            leading: Icon(Icons.settings, size: 26, color: Theme.of(context).colorScheme.onBackground,),
+            leading: Icon(Icons.settings, size: 26, color: Theme.of(context).colorScheme.onSurface,),
             title: Text(
               'Filters',
               style: Theme.of(context).textTheme.titleSmall!.copyWith(
-                    color: Theme.of(context).colorScheme.onBackground,
+                    color: Theme.of(context).colorScheme.onSurface,
                     fontSize: 24,
                   ),
             ),
